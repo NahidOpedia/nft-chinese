@@ -86,10 +86,18 @@ function CreateBanner() {
 
             <Grid className="py-5" item md={12} lg={6} xs={12}>
               <div className="right getbetterRight">
-                <p className="">名称</p>
-                <p className="">联络方式</p>
-                <p className="">电子邮件</p>
-                <p className="pb-10">NFT 项目描述（最多 300 个字)</p>
+                {/* <p className="">名称</p> */}
+                <input type="text" placeholder="名称" />
+                <input type="text" placeholder="联络方式" />
+                <input type="text" placeholder="电子邮件" />
+                {/* <p className="">联络方式</p>
+                <p className="">电子邮件</p> */}
+                <input
+                  className="pb-10"
+                  type="text"
+                  placeholder="NFT 项目描述（最多 300 个字)"
+                />
+                {/* <p className="pb-10">NFT 项目描述（最多 300 个字)</p> */}
                 <div className="total mt-5 px-4 pt-2">
                   <span className="totaltitle">立即列印</span>
                   <span className="totaltitle">5%</span>
@@ -106,7 +114,7 @@ function CreateBanner() {
                     <img src={tick} alt="" />
                   </div>
                 </div>
-                <p className="getbetterbutton">提交</p>
+                <p className="getbetterbutton px-2  py-3">提交</p>
               </div>
             </Grid>
           </Grid>
@@ -121,34 +129,85 @@ function CreateBanner() {
             <Grid className="p-4" item md={6} xs={12}>
               <div className="right">
                 <p>合集名称</p>
-                <p className="pb-10">合集描述 (最多 300 个字)</p>
+                <input type="text" placeholder="合集名称" />
+                <input type="text" placeholder="NFT 项目描述（最多 300 个字)" />
+                <input type="text" placeholder="总数量" />
+                <input type="text" placeholder="版权" />
+                {/* <p className="pb-10">合集描述 (最多 300 个字)</p>
                 <p>总数量</p>
-                <p>版权</p>
+                <p>版权</p> */}
               </div>
             </Grid>
             <Grid className="p-4" item md={6} xs={12}>
-              <div className="right">
-                <p>NFT 名称</p>
-                <p>列印价格</p>
+              <div className="right pt-4">
+                <h5 className="py-2">NFT 名称</h5>
+                <h5>列印价格</h5>
 
-                <div className="total mt-5 px-4 pt-2">
+                {/* radio buttons  */}
+                <div
+                  style={{ alignItems: "end" }}
+                  className="form-check d-flex justify-content-between "
+                >
+                  <label className="form-check-label" for="flexRadioDefault1">
+                    立即列印
+                  </label>
+                  <input
+                    className="totaltitle form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                </div>
+                <div
+                  style={{ alignItems: "end" }}
+                  className="form-check d-flex justify-content-between "
+                >
+                  <label className="form-check-label" for="flexRadioDefault2">
+                    买方列印
+                  </label>
+                  <input
+                    className="totaltitle form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                    checked
+                  />
+                </div>
+                <div
+                  style={{ alignItems: "end" }}
+                  className="form-check d-flex justify-content-between "
+                >
+                  <label className="form-check-label" for="flexRadioDefault2">
+                    隐藏直到列印
+                  </label>
+                  <input
+                    className="totaltitle form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                    checked
+                  />
+                </div>
+                {/* radio buttons  */}
+
+                {/* <div className="total mt-5  pt-2">
                   <span className="totaltitle">立即列印</span>
                   <div className="img">
                     <img src={tick} alt="" />
                   </div>
                 </div>
-                <div className="total mt-4 px-4">
+                <div className="total mt-4">
                   <span className="totaltitle">买方列印</span>
                   <div className="img">
                     <img src={tick} alt="" />
                   </div>
                 </div>
-                <div className="total mt-4 px-4">
+                <div className="total mt-4">
                   <span className="totaltitle">隐藏直到列印</span>
                   <div className="img">
                     <img src={tick} alt="" />
                   </div>
-                </div>
+                </div> */}
               </div>
             </Grid>
           </Grid>
@@ -215,7 +274,8 @@ function CreateBanner() {
               的链接，以便用户可以单击以了解更多信息
               欢迎链接到您自己的网页以了解更多详情
             </p>
-            <p className="mt-5 px-3">https://yoursiteio/item/123</p>
+            {/* <p className="mt-5 px-3">https://yoursiteio/item/123</p> */}
+            <input type="text" placeholder="https://yoursiteio/item/123" />
 
             {/* second */}
             <div

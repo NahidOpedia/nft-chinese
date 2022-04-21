@@ -35,57 +35,56 @@ function SearchItemMore({ filterName }) {
     }, 1000);
   };
 
+  // function SingleBlogDetails() {
 
-  
-// function SingleBlogDetails() {
+  //   const [detail, setDetail] = useState([])
 
-//   const [detail, setDetail] = useState([])
-
-//   let { id } = useParams();
-//   const blogDetails = async ()=>{
-//     await axios
-//   .get(`${server}/api/main/newsdetail/?id=${id}`
-//   ).then(res => {
-//     setDetail(res.data.data)
-//   })
-//   }
-
-
+  //   let { id } = useParams();
+  //   const blogDetails = async ()=>{
+  //     await axios
+  //   .get(`${server}/api/main/newsdetail/?id=${id}`
+  //   ).then(res => {
+  //     setDetail(res.data.data)
+  //   })
+  //   }
 
   useEffect(() => {}, []);
   return (
-    <div className="productsection wrapper">
-      <div className="profileItem ">
-        <Grid container>
-          <Grid item md={6} xs={12}>
-            <div className="img">
-              <img className="img-fluid" src={Axie} alt="cat" />
-            </div>
+    <>
+      <div className="productsection wrapper">
+        <div className="profileItem">
+          <Grid container>
+            <Grid item md={6} xs={12}>
+              <div className="img">
+                <img className="img-fluid" src={Axie} alt="cat" />
+              </div>
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <h1>Pyromaniac 0678</h1>
+              <p>NFT 合集描述段 01 </p>
+              <p>NFT 合集描述段 01 </p>
+              <p>NFT 合集描述段 01 </p>
+              <p>NFT 合集描述段 01 </p>
+              <p>NFT 合集描述段 01 </p>
+              <h1>1 BNB</h1>
+              <ButtonFill styleC={{ width: "100%" }} title="购买" />
+              <Filter
+                menuTitle={["信息", "历史记录"]}
+                setSeletedItem={setSeletedItem}
+                seletedItem={seletedItem}
+              />
+              <h4>列印交易</h4>
+              <p>0x4e0c7c6a6xxxxxxxxcd3eb11fa8b7121a5</p>
+              <h4>列印交易</h4>
+              <p>0x4e0c7c6a6xxxxxxxxcd3eb11fa8b7121a5</p>
+            </Grid>
           </Grid>
-          <Grid item md={6} xs={12}>
-            <h1>Pyromaniac 0678</h1>
-            <p>NFT 合集描述段 01 </p>
-            <p>NFT 合集描述段 01 </p>
-            <p>NFT 合集描述段 01 </p>
-            <p>NFT 合集描述段 01 </p>
-            <p>NFT 合集描述段 01 </p>
-            <h1>1 BNB</h1>
-            <ButtonFill styleC={{ width: "100%" }} title="购买" />
-            <Filter
-              menuTitle={["信息", "历史记录"]}
-              setSeletedItem={setSeletedItem}
-              seletedItem={seletedItem}
-            />
-            <h4>列印交易</h4>
-            <p>0x4e0c7c6a6xxxxxxxxcd3eb11fa8b7121a5</p>
-            <h4>列印交易</h4>
-            <p>0x4e0c7c6a6xxxxxxxxcd3eb11fa8b7121a5</p>
-          </Grid>
-        </Grid>
+        </div>
       </div>
-
-      <SliderSearchMore />
-    </div>
+      <div className="bg-p">
+        <SliderSearchMore />
+      </div>
+    </>
   );
 }
 

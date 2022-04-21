@@ -621,9 +621,13 @@ body {
 
 /* productsection */
 .productsection {
-  background: #f6f6f6 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
   padding: 0px 0 112px;
   margin-top: 112px;
+}
+.bg-p {
+  background: #f6f6f6 0% 0% no-repeat padding-box;
+  padding: 45px 0px 115px;
 }
 /* productsection */
 
@@ -1014,6 +1018,7 @@ h4 {
   font-size: 25px;
   letter-spacing: 0px;
   color: #f146c8;
+  cursor: pointer;
 }
 .home .buttons {
   display: flex;
@@ -1036,6 +1041,7 @@ h4 {
   font-size: 25px;
   color: #f146c8;
   border-bottom: 1px solid var(--clr-primary);
+  cursor: pointer;
 }
 .itemBanner .tag {
   text-align: center;
@@ -1052,7 +1058,7 @@ h4 {
   justify-content: center;
   align-items: center;
 }
-.createBannerBottom p {
+.createBannerBottom input {
   background: #ededed 0% 0% no-repeat padding-box;
   border-radius: 15px;
 
@@ -1061,6 +1067,16 @@ h4 {
   letter-spacing: 0px;
   color: #706f6f;
   padding: 10px 20px;
+  border: none !important;
+}
+.createBannerBottom input::placeholder {
+  background: #ededed 0% 0% no-repeat padding-box;
+  font: normal normal normal 18px/40px SF Pro;
+  color: #706f6f;
+  padding: 10px 5px;
+}
+.form-check {
+  padding-left: 0em;
 }
 .createBannerBottom .pricing {
   display: flex;
@@ -1088,6 +1104,20 @@ h4 {
   letter-spacing: 0px;
   color: #706f6f;
 }
+.form-check-input:checked,
+.form-check-input {
+  background-color: #afafaf !important;
+  border-color: #b0b2b4;
+  height: 35px !important;
+  width: 12px !important;
+}
+.form-check-input:checked:focus {
+  outline: none !important;
+}
+.form-check-input:checked[type="radio"] {
+  background-position: center;
+}
+
 .createBannerBottom .total img {
   height: 40px;
 }
@@ -1742,6 +1772,7 @@ li.search-item {
 .search-author {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .search-list-item {
@@ -1750,6 +1781,7 @@ li.search-item {
   justify-content: space-between;
   padding: 20px 30px;
   border-top: 2px solid #bbbbbb26;
+  cursor: pointer;
 }
 
 .search-author img {
@@ -2076,704 +2108,46 @@ p {
 
 /* Setting */
 
-/* media query  */
+/* pull kore ei codde boshate hbe  */
 
-@media screen and (max-width: 575px) {
-  .primaryButton {
-    font: normal normal bold 10px/45px SF Pro;
-    margin: 0px;
-    padding: 10px 50px;
-    margin: 0px;
-  }
-  .getdealtitla {
-    font: normal normal normal 20px/40px SF Pro;
-  }
-  .primaryButton {
-    font: normal normal bold 15px/45px SF Pro;
-    margin: 0px;
-    padding: 0px 30px;
-  }
-  .createBannerBottom p {
-    font: normal normal normal 15px/40px SF Pro;
-  }
-
-  .search {
-    display: none;
-  }
-  .footer1 .title {
-    font: normal normal normal 17px/35px SF Pro;
-    margin: 10px 0px 8px 0;
-  }
-  .upperfooter {
-    margin-top: 0px;
-  }
-  .py-115 {
-    padding: 115px 0px 15px !important;
-  }
-  .footerimg {
-    text-align: center;
-  }
-  .footer1 .email {
-    font: normal normal normal 12px/5px SF Pro;
-    display: flex;
-    justify-content: space-between;
-  }
-  .upperfooter h3 {
-    font: normal normal bold 20px/45px SF Pro;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  .upperfooter p {
-    font: normal normal normal 14px/3px SF Pro;
-    text-align: center;
-  }
-  .footer1 {
-    padding: 0px 0px 20px;
-  }
-  .footer p {
-    font-size: 16px;
-    text-align: center;
-  }
-  .banner h3 {
-    font-size: 30px !important;
-    line-height: 45px !important;
-  }
-  .banner h3 {
-    margin: 20px 0 !important;
-  }
-  .navbar ul li {
-    margin-left: 1px !important;
-  }
-  .bannerText .tag {
-    font-size: 12px !important;
-    margin-right: 5px;
-  }
-  .bannerText {
-    font-size: 12px !important;
-  }
-  .buttonFill {
-    margin: 25px 16px 20px 0;
-    box-shadow: 6px 6px 0px -4px rgb(240 237 237 / 72%) inset;
-    border: 5px solid var(--clr-border);
-  }
-  .sectionHeader h2 {
-    font: normal normal 700 30px/45px SF Pro !important;
-  }
-  .sectionHeader p {
-    font: normal normal normal 20px/40px SF Pro;
-    margin-top: 20px;
-  }
-  .itemBanner h1 {
-    font-size: 40px !important;
-    margin: 0px !important;
-  }
-  .itemBanner {
-    padding: 20px 0px;
-  }
-  .des h3 {
-    font: normal normal bold 15px/45px SF Pro !important;
-    margin: 15px 0px !important;
-  }
-  .des p {
-    font: normal normal normal 15px/25px SF Pro !important;
-    margin: 10px 0px 0px !important;
-  }
-  .flowmain {
-    margin: 50px 0 0px;
-    text-align: -webkit-center;
-    width: 100%;
-  }
-  .footer1 .title {
-    font: normal normal normal 20px/45px SF Pro !important;
-  }
-  .footer1 .email {
-    font: normal normal normal 15px/5px SF Pro !important;
-  }
-  .upperfooter h3 {
-    font: normal normal bold 22px/45px SF Pro !important;
-    margin-bottom: 1rem !important;
-  }
-  .upperfooter p {
-    font: normal normal normal 15px/10px SF Pro !important;
-  }
+.bannerProfile {
+  margin: 20px;
+  box-shadow: 0px 10px 30px #1d031e26;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+.bannerProfile .description {
+  padding: 32px;
+}
+.bannerProfile .description h2 {
+  font-size: 25px;
+  line-height: 22px;
+  font-weight: bold;
+  font-family: system-ui;
+}
+.bannerProfile .description p {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: system-ui;
+  color: #a5a5a5;
+  margin-top: 15px;
+  font-weight: 800;
+}
+.itemBanner h1 {
+  margin: 10px;
+}
+.bannerProfile .img img {
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
 }
 
-@media (max-width: 767px) {
-  .buttonFill {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  .buttonstock {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  .swiper-slide-next {
-    height: 200px !important;
-    border-radius: 10px !important;
-  }
-  .primaryButton {
-    font: normal normal normal 20px/40px SF Pro;
-    padding: 10px 70px !important;
-  }
-  .createBannerBottom p {
-    font: normal normal normal 25px/40px SF Pro;
-  }
-  .buttonstock {
-    margin-left: 5px;
-    width: 100% !important;
-  }
-  /* .supportdivLogo { */
-  /* display: none !important; */
-  /* } */
-  .survicesmain img {
-    height: 30px;
-    width: 30px;
-    margin: 20px 0px;
-  }
-  .itemBanner h1 {
-    font-size: 50px;
-  }
-  .banner h3 {
-    font-size: 35px;
-    line-height: 40px;
-  }
-  .sectionHeader h2 {
-    font: normal normal 700 40px/65px SF Pro;
-  }
-
-  /* footer section */
-  .footer1 .title {
-    font: normal normal normal 17px/35px SF Pro;
-    margin: 10px 0px 8px 0;
-  }
-  .upperfooter {
-    margin-top: 0px;
-  }
-  .py-115 {
-    padding: 115px 0px 15px !important;
-  }
-  .footerimg {
-    text-align: center;
-  }
-  .footer1 .email {
-    font: normal normal normal 12px/5px SF Pro;
-    display: flex;
-    justify-content: space-between;
-  }
-  .upperfooter h3 {
-    font: normal normal bold 20px/45px SF Pro;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  .upperfooter p {
-    font: normal normal normal 14px/3px SF Pro;
-    text-align: center;
-  }
-  .footer1 {
-    padding: 0px 0px 20px;
-  }
-  .footer p {
-    font-size: 16px;
-    text-align: center;
-  }
-  .navbar ul li {
-    margin: 10px;
-  }
-  .navbar ul li {
-    margin-left: 1px !important;
-  }
-  .supportHeadline h5 {
-    padding: 30px 0px;
-    font: normal normal 26px/0px SF Pro;
-    letter-spacing: 0px;
-    color: #ffffff;
-  }
-  .supportHeadline {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 992px) {
-  .supportHeadline h5 {
-    font: normal normal 26px/30px SF Pro;
-  }
-  .supportHeadline {
-    justify-content: center;
-  }
-  .banner h3 {
-    line-height: 40px;
-    font-size: 45px;
-  }
-  .bannerText {
-    width: 74%;
-  }
-  .connectMain h1 {
-    font: normal normal bold 45px/55px SF Pro;
-  }
-  .connectMain p {
-    font: normal normal normal 22px/35px SF Pro;
-  }
-  .connectionName {
-    font: normal normal 600 30px/33px SF Pro !important;
-    margin-left: 30px;
-  }
-  .connectheader h1,
-  .connectheader p {
-    text-align: center;
-  }
-  .sectionHeader p {
-    margin-top: 40px;
-    padding: 0px 20px;
-  }
-
-  /* footer section */
-  .footercontent {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-  }
-  .footer1 .title {
-    font: normal normal normal 28px/45px SF Pro;
-    margin: 10px 0px 8px 0;
-    text-align: center;
-  }
-  .upperfooter {
-    margin-top: 40px;
-  }
-  .py-115 {
-    padding: 115px 0px 15px !important;
-  }
-  .footerimg {
-    text-align: center;
-  }
-  .footer1 .email {
-    font: normal normal normal 25px/5px SF Pro;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .upperfooter h3 {
-    font: normal normal bold 28px/45px SF Pro;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  .upperfooter p {
-    font: normal normal normal 18px/13px SF Pro;
-    text-align: center;
-  }
-  .footer1 {
-    padding: 0px 0px 20px;
-  }
-  .footer p {
-    font-size: 16px;
-    text-align: center;
-  }
-  .navbar ul li {
-    margin: 10px;
-  }
-  .navbar ul li {
-    margin-left: 1px !important;
-  }
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  .slider-arrow .prev,
-  .slider-arrow .next {
-    display: none;
-  }
-  .primaryButton {
-    font: normal normal bold 20px/45px SF Pro;
-    margin: 20px;
-    padding: 10px 50px;
-  }
-  .survicesmain {
-    padding: 40px 30px;
-  }
-  .carditemChange {
-    padding: 50px 0px;
-  }
-  .navbar ul li {
-    margin-left: 10px !important  ;
-  }
-  /* .search { */
-  /* margin-left: 56px; */
-  /* } */
-  .itemBanner h1 {
-    font-size: 40px !important;
-  }
-  h1 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 38px;
-    margin: 16px 0px 0px 0px;
-    line-height: 56px;
-  }
-  .banner p {
-    font-size: 15px;
-    line-height: 25px;
-  }
-  .swiper-slide-next {
-    height: 200px !important;
-    border-radius: 10px !important;
-  }
-  .banner .profits p {
-    font-size: 14px;
-    margin: 0px 0px 0px;
-  }
-  .buttonFill {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  .buttonstock {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  .flowmain {
-    margin: 50px 0 0px;
-  }
-  .itemServices {
-    padding: 90px 20px;
-  }
-  .banner h3 {
-    font-size: 35px !important;
-    line-height: 40px;
-  }
-  .sectionHeader h2 {
-    font: normal normal 700 40px/65px SF Pro !important;
-  }
-  .search {
-    display: none !important;
-  }
-}
-
-@media (max-width: 1200px) {
-  .arrow-btn .next {
-    display: none !important;
-  }
-  .arrow-btn .prev {
-    display: none !important;
-  }
-  .swiper-slide-next {
-    height: 250px !important;
-    border-radius: 8px !important;
-  }
-  .itemBanner h1 {
-    font-size: 40px;
-  }
-  .des h3 {
-    text-align: center;
-    font: normal normal bold 30px/40px SF Pro !important;
-  }
-  .search {
-    background: #ffffff 0% 0% no-repeat padding-box;
-    border: 1px solid #c6c6c6;
-    border-radius: 12px;
-    padding: 10px 20px;
-    /* width: 35%; */
-    width: 30%;
-
-    margin-left: 6%;
-    /* margin-left: 1%; */
-    /* margin-left: 119px; */
-    position: relative;
-  }
-  .py-115 {
-    padding: 115px 0px 70px !important;
-  }
-  .search {
-    width: 17%;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1400px) {
-  .content h1 {
-    font: normal normal bold 40px/45px SF Pro;
-    margin-bottom: 0px;
-  }
-  .content p {
-    font: normal normal normal 18px/30px SF Pro;
-    margin-top: 20px;
-  }
-  .itemCreateNFt {
-    padding: 60px 0;
-  }
-  .navbar ul li {
-    margin-left: 10px !important;
-  }
-  .itemServices {
-    padding: 70px 20px;
-  }
-  .sectionHeader h2 {
-    font: normal normal bold 45px/65px SF Pro;
-  }
-  .sectionHeader p {
-    font: normal normal normal 20px/65px SF Pro;
-    margin-top: 10px;
-  }
-  .itemBanner {
-    padding: 30px 0px;
-  }
-  .itemBanner h1 {
-    font-size: 40px !important;
-  }
-  .flowmain {
-    margin: 50px 0 0px;
-  }
-  .flowmain h2 {
-    font: normal normal bold 25px/40px SF Pro;
-    margin-top: 50px;
-  }
-  .flowmain p {
-    font: normal normal normal 15px/25px SF Pro;
-    padding: 10px 15% 0;
-  }
-  .banner h3 {
-    font-size: 40px;
-    line-height: 50px;
-    margin: 22px 0;
-  }
-  .bannerText {
-    line-height: 15px;
-    font-size: 14px;
-    text-align: center;
-  }
-  .itemServicesDes h3 {
-    font: normal normal bold 40px/45px SF Pro;
-  }
-  .footer1 .email {
-    font: normal normal normal 22px/35px SF Pro;
-  }
-  .footer1 .title {
-    font: normal normal normal 25px/35px SF Pro;
-    margin: 30px 0px 40px 0;
-  }
-  .upperfooter h3 {
-    font: normal normal bold 42px/45px SF Pro;
-    margin-bottom: 1rem;
-  }
-  .upperfooter p {
-    font: normal normal normal 22px/25px SF Pro;
-  }
-}
-
-@media (max-width: 1400px) {
-  .navbar ul li {
-    padding: 5px 0px;
-    margin-left: 30px;
-  }
-  .newslatter {
-    text-align: -webkit-center;
-  }
-  .recomandLow div small,
-  .Atname {
-    font-size: 10px;
-    letter-spacing: 1px;
-    color: #cecece;
-  }
-  .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .banner h3 {
-    text-align: center;
-    margin: 35px 0;
-    line-height: 76px;
-  }
-  .itemBanner h1 {
-    font-size: 70px;
-  }
-  .des h3 {
-    text-align: center;
-    font: normal normal bold 30px/5px SF Pro;
-  }
-  .des p {
-    text-align: center;
-    font: normal normal normal 19px/35px SF Pro;
-    margin: 0px 0px 0px;
-  }
-  h1 {
-    font-size: 40px;
-  }
-  .bannerText {
-    margin-top: 15px;
-    line-height: 25px;
-    display: flex;
-    justify-content: center;
-  }
-  .getdealtitla {
-    font: normal normal normal 25px/40px SF Pro;
-  }
-  .createBannerBottom .top {
-    height: 400px !important;
-  }
-  .createBannerBottom p {
-    font: normal normal normal 25px/40px SF Pro;
-  }
-  .createBannerBottom .totaltitle {
-    font: normal normal normal 25px/40px SF Pro;
-  }
-  .primaryButtonf {
-    margin: 10px;
-    padding: 15px 40px;
-  }
-  .h2,
-  h2 {
-    font-size: 1.2rem;
-  }
-}
-
-@media (min-width: 1401px) and (max-width: 1920px) {
-  .itemBanner h1 {
-    font-size: 70px;
-  }
-
-  .itemBanner {
-    padding: 30px 0px !important;
-  }
-  .flowmain {
-    margin: 50px 0 0px;
-  }
-  .flowmain h2 {
-    font: normal normal bold 25px/40px SF Pro;
-    margin-top: 50px;
-  }
-  .flowmain p {
-    font: normal normal normal 15px/25px SF Pro;
-    padding: 10px 15% 0;
-  }
-  .banner h3 {
-    font-size: 50px;
-  }
-  .itemServicesDes h3 {
-    font: normal normal bold 35px/45px SF Pro;
-  }
-  .footer1 .email {
-    font: normal normal normal 25px/35px SF Pro;
-  }
-  .footer1 .title {
-    font: normal normal normal 25px/35px SF Pro;
-    margin: 30px 0px 40px 0;
-  }
-  .upperfooter h3 {
-    font: normal normal bold 30px/45px SF Pro;
-    margin-bottom: 1rem;
-  }
-  .upperfooter p {
-    font: normal normal normal 20px/25px SF Pro;
-  }
-}
-@media (min-width: 1401px) and (max-width: 1538px) {
-  .banner {
-    align-items: center !important;
-    display: flex;
-    flex-direction: column;
-  }
-  .banner h3 {
-    text-align: center;
-    font-size: 50px;
-  }
-  .bannerText {
-    width: 100%;
-    margin-top: 35px;
-    line-height: 25px;
-    display: flex;
-    justify-content: center;
-  }
-}
-@media (max-width: 600px) {
-  .survicesmain {
-    padding: 40px 32px !important;
-    margin: 1px 4px !important;
-  }
-  .supportHeadline h5 {
-    padding: 30px 0px;
-    font: normal normal 25px/5px SF Pro;
-  }
-  .supportHeadline {
-    justify-content: center;
-  }
-  .search-wrap input {
-    margin-left: 0px;
-  }
-  .banner h3 {
-    line-height: 46px;
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 564px) {
-  .survicesmain {
-    padding: 40px 17px !important;
-    margin: 0px 10px !important;
-  }
-  .supportHeadline {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: center;
-  }
-  .supportHeadline h5 {
-    padding: 25px 0px;
-    font: normal normal 20px/10px SF Pro;
-    letter-spacing: 0px;
-    color: #ffffff;
-  }
-}
-@media (max-width: 563px) {
-  .survicesmain {
-    padding: 40px 10px !important;
-    margin: 1px 16px !important;
-  }
-}
-
-@media (max-width: 425px) {
-  .survicesmain {
-    padding: 30px 10px !important;
-    margin: 1px 10px !important;
-  }
-}
-@media (max-width: 375px) {
-  .survicesmain {
-    padding: 30px 10px !important;
-    margin: 1px 3px !important;
-  }
-  .getdealtitla {
-    font: normal normal normal 12px/20px SF Pro !important;
-  }
-  .primaryButton {
-    font: normal normal normal 12px/20px SF Pro;
-    padding: 5px 10px !important;
-  }
-  .createBannerBottom .top {
-    height: 200px !important;
-  }
-  .connectionName {
-    font: normal normal 600 18px/33px SF Pro !important;
-    margin-left: 10px;
-  }
-  .connectMain h1 {
-    font: normal normal bold 35px/35px SF Pro !important;
-  }
-  .connectMain p {
-    font: normal normal normal 20px/25px SF Pro;
-  }
-  .primaryButtonf {
-    font: normal normal bold 13px/15px SF Pro;
-    margin: 10px;
-    padding: 10px 10px;
-  }
-}
-@media (max-width: 320px) {
-  .survicesmain {
-    padding: 30px 10px !important;
-    margin: 1px 2px !important;
-  }
-  .supportHeadline {
-    justify-content: center !important;
-  }
-  .supportHeadline h5 {
-    padding: 20px 0px !important;
+/* pull kore ei codde boshate hbe  */
+@media (min-width: 324px) and (max-width: 1024px) {
+  .modalheader {
+    width: 59% !important;
+    margin: 0 auto;
+    /* height: 100%; */
   }
 }

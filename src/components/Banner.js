@@ -9,11 +9,20 @@ import banner2 from "../assects/home/Jay-Z.png";
 import banner3 from "../assects/home/Snoop Dogg.png";
 import SectionHeader from "./SectionHeader";
 
+const unsplashpic =
+  "https://images.unsplash.com/photo-1647643050583-3ab2bf9e3ba3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
+
+const unsplashpic2 =
+  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80";
+
+const unsplashpic3 =
+  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
+
 function Banner() {
   return (
     <>
-      <div className="wrapper home">
-        <Grid className="my-xl-5 wrapper" container>
+      <div className="wrapper home py-115">
+        <Grid className="wrapper" container>
           <Grid item xl={4} lg={12} md={12} xs={12}>
             <div className="banner">
               <h3>
@@ -44,21 +53,51 @@ function Banner() {
               </div>
             </div>
           </Grid>
-          <Grid item xl={8} lg={12} md={12} xs={12}>
-            <Grid container className="mt-lg-5">
+          <Grid className="mt-sm-5" item xl={8} lg={12} md={12} xs={12}>
+            <Grid container>
               <Grid item xl={4} xs={4} md={4} sm={4}>
-                <div className="img">
+                {/* <div className="img">
                   <img className="img-fluid" src={banner1} alt="" />
+                </div> */}
+                <div className="bannerProfile">
+                  <div className="img">
+                    <img height={270} width={257} src={unsplashpic} alt="" />
+                  </div>
+                  <div className="description">
+                    <h2>Jay-Z</h2>
+                    <h2>Cryptopunk</h2>
+                    <p className="totalamount">32..08BNB</p>
+                  </div>
                 </div>
               </Grid>
-              <Grid item xl={4} xs={4} md={4} sm={4}>
-                <div className="mt-xl-5 img">
+              <Grid className="mt-xl-5" item xl={4} xs={4} md={4} sm={4}>
+                {/* <div className="mt-xl-5 img">
                   <img className="img-fluid" src={banner2} alt="" />
+                </div> */}
+                <div className="bannerProfile">
+                  <div className="img">
+                    <img height={270} width={257} src={unsplashpic2} alt="" />
+                  </div>
+                  <div className="description">
+                    <h2>Jay-Z</h2>
+                    <h2>Cryptopunk</h2>
+                    <p className="totalamount">32..08BNB</p>
+                  </div>
                 </div>
               </Grid>
               <Grid item xl={4} xs={4} md={4} sm={4}>
-                <div className="img">
+                {/* <div className="img">
                   <img className="img-fluid" src={banner3} alt="" />
+                </div> */}
+                <div className=" bannerProfile">
+                  <div className="img">
+                    <img height={270} width={257} src={unsplashpic3} alt="" />
+                  </div>
+                  <div className="description">
+                    <h2>Jay-Z</h2>
+                    <h2>Cryptopunk</h2>
+                    <p className="totalamount">32..08BNB</p>
+                  </div>
                 </div>
               </Grid>
             </Grid>
