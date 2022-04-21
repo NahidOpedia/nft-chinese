@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" viewBox="0 0 36 30">
+  <g id="Mail_Icon" data-name="Mail Icon" transform="translate(0 0)">
+    <path id="Path_40" data-name="Path 40" d="M3,0V3H0V27H3V6H6V3H30V6h3V27h3V3H33V0Z" fill="#f146c8"/>
+    <rect id="Rectangle_231" data-name="Rectangle 231" width="3" height="3" transform="translate(27 6)" fill="#f146c8"/>
+    <rect id="Rectangle_232" data-name="Rectangle 232" width="3" height="3" transform="translate(24 9)" fill="#f146c8"/>
+    <rect id="Rectangle_233" data-name="Rectangle 233" width="3" height="3" transform="translate(21 12)" fill="#f146c8"/>
+    <path id="Path_41" data-name="Path 41" d="M15,15v3h6V15H15Z" fill="#f146c8"/>
+    <rect id="Rectangle_234" data-name="Rectangle 234" width="3" height="3" transform="translate(12 12)" fill="#f146c8"/>
+    <rect id="Rectangle_235" data-name="Rectangle 235" width="3" height="3" transform="translate(9 9)" fill="#f146c8"/>
+    <rect id="Rectangle_236" data-name="Rectangle 236" width="3" height="3" transform="translate(6 6)" fill="#f146c8"/>
+    <path id="Path_42" data-name="Path 42" d="M30,27H3v3H33V27Z" fill="#f146c8"/>
+  </g>
+</svg>

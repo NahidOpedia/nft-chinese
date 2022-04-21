@@ -1,0 +1,30 @@
+<svg id="Telegram_Icon" data-name="Telegram Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_167" data-name="Rectangle 167" width="50" height="50" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_43" data-name="Group 43" clip-path="url(#clip-path)">
+    <path id="Path_35" data-name="Path 35" d="M13.09,23.349l20.034-7.725c.93-.336,1.741.227,1.441,1.633l0,0L31.155,33.326c-.253,1.139-.929,1.416-1.877.879l-5.194-3.828-2.506,2.414a1.309,1.309,0,0,1-1.048.511l.37-5.286,9.627-8.7c.418-.369-.093-.576-.646-.21L17.984,26.6,12.855,25c-1.114-.353-1.138-1.113.235-1.65" fill="#878787"/>
+    <rect id="Rectangle_147" data-name="Rectangle 147" width="2.777" height="2.778" transform="translate(5.556 8.333)" fill="#878787"/>
+    <rect id="Rectangle_148" data-name="Rectangle 148" width="2.778" height="2.778" transform="translate(8.333 5.555)" fill="#878787"/>
+    <rect id="Rectangle_149" data-name="Rectangle 149" width="5.556" height="2.778" transform="translate(11.111 2.778)" fill="#878787"/>
+    <rect id="Rectangle_150" data-name="Rectangle 150" width="16.666" height="2.778" transform="translate(16.667)" fill="#878787"/>
+    <rect id="Rectangle_151" data-name="Rectangle 151" width="5.556" height="2.778" transform="translate(33.333 2.778)" fill="#878787"/>
+    <rect id="Rectangle_152" data-name="Rectangle 152" width="2.778" height="2.778" transform="translate(38.889 5.555)" fill="#878787"/>
+    <rect id="Rectangle_153" data-name="Rectangle 153" width="2.778" height="5.556" transform="translate(44.445 11.111)" fill="#878787"/>
+    <rect id="Rectangle_154" data-name="Rectangle 154" width="2.777" height="2.778" transform="translate(41.667 8.333)" fill="#878787"/>
+    <rect id="Rectangle_155" data-name="Rectangle 155" width="2.778" height="5.556" transform="translate(2.778 11.111)" fill="#878787"/>
+    <rect id="Rectangle_156" data-name="Rectangle 156" width="2.777" height="16.667" transform="translate(0 16.666)" fill="#878787"/>
+    <rect id="Rectangle_157" data-name="Rectangle 157" width="2.778" height="5.556" transform="translate(2.777 33.333)" fill="#878787"/>
+    <rect id="Rectangle_158" data-name="Rectangle 158" width="2.777" height="2.778" transform="translate(5.556 38.889)" fill="#878787"/>
+    <rect id="Rectangle_159" data-name="Rectangle 159" width="2.778" height="2.778" transform="translate(8.333 41.667)" fill="#878787"/>
+    <rect id="Rectangle_160" data-name="Rectangle 160" width="5.556" height="2.778" transform="translate(11.111 44.444)" fill="#878787"/>
+    <rect id="Rectangle_161" data-name="Rectangle 161" width="16.666" height="2.777" transform="translate(16.667 47.223)" fill="#878787"/>
+    <rect id="Rectangle_162" data-name="Rectangle 162" width="5.556" height="2.778" transform="translate(33.333 44.444)" fill="#878787"/>
+    <rect id="Rectangle_163" data-name="Rectangle 163" width="2.778" height="2.778" transform="translate(38.889 41.667)" fill="#878787"/>
+    <rect id="Rectangle_164" data-name="Rectangle 164" width="2.777" height="2.778" transform="translate(41.667 38.889)" fill="#878787"/>
+    <rect id="Rectangle_165" data-name="Rectangle 165" width="2.778" height="5.556" transform="translate(44.444 33.333)" fill="#878787"/>
+    <rect id="Rectangle_166" data-name="Rectangle 166" width="2.777" height="16.667" transform="translate(47.223 16.666)" fill="#878787"/>
+  </g>
+</svg>
