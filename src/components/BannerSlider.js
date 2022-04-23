@@ -56,7 +56,6 @@ var settings = {
 };
 export default class BannerSlider extends React.Component {
   renderArrows = () => {
-
     return (
       <div className="slider-arrow">
         <ButtonBase
