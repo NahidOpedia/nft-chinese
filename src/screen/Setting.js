@@ -14,7 +14,7 @@ function Setting() {
   const [seletedNav, setSeletedNav] = useState("账户");
 
   return (
-    <div className="wrapper setting-main">
+    <div className="wrapper setting-main mt-md-5  pt-responsive">
       <Grid container spacing={1}>
         <Grid item md={2}>
           <div className="setting-sidebar">
@@ -47,32 +47,32 @@ function Setting() {
 export default Setting;
 
 function Account() {
-  const [nickname,setNickname] = useState('')
-  const [avatar,setAvatar] = useState('')
-  const [picture,setPicture] = useState('')
-  const [email,setEmail] = useState('')
-  const [mark,setMark] = useState('')
-  const [facebook,setFacebook] = useState('')
-  const [youtube,setYoutube] = useState('')
-  const [skype,setSkype] = useState('')
+  const [nickname, setNickname] = useState("");
+  const [avatar, setAvatar] = useState("");
+  const [picture, setPicture] = useState("");
+  const [email, setEmail] = useState("");
+  const [mark, setMark] = useState("");
+  const [facebook, setFacebook] = useState("");
+  const [youtube, setYoutube] = useState("");
+  const [skype, setSkype] = useState("");
 
-    const userHandler = async()=>{
-      console.log(avatar)
-        // await axios
-        // .post(`${server}/api/user/info`, {
-        //   nickname: nickname, 
-        //   avatar: avatar,
-        //   picture:picture,
-        //   email: email,
-        //   mark: mark,
-        //   facebook:facebook,
-        //   youtube:youtube,
-        //   skype:skype
-        // })
-        // .then(res => {
-        //   console.log(res)
-        // })
-    }
+  const userHandler = async () => {
+    console.log(avatar);
+    // await axios
+    // .post(`${server}/api/user/info`, {
+    //   nickname: nickname,
+    //   avatar: avatar,
+    //   picture:picture,
+    //   email: email,
+    //   mark: mark,
+    //   facebook:facebook,
+    //   youtube:youtube,
+    //   skype:skype
+    // })
+    // .then(res => {
+    //   console.log(res)
+    // })
+  };
 
   return (
     <div className="account">
@@ -80,47 +80,51 @@ function Account() {
       <Grid container>
         <Grid item md={6}>
           <small>用户名称 nickname</small>
-          <input type="text"  onChange={(e) =>
-                                      setNickname(e.target.value)
-                                    }
-                                    value={nickname} placeholder="Elvis Khoo" />
+          <input
+            type="text"
+            onChange={(e) => setNickname(e.target.value)}
+            value={nickname}
+            placeholder="Elvis Khoo"
+          />
           <small>个人简介 mark</small>
           <input
-            type="text" onChange={(e) =>
-              setMark(e.target.value)
-            }
+            type="text"
+            onChange={(e) => setMark(e.target.value)}
             value={mark}
             placeholder="Mind Blowing NFT Creator Let Us Grow Together!"
           />
           <small>电子邮件 Email</small>
-          <input type="text" onChange={(e) =>
-              setEmail(e.target.value)
-            }
-            value={email}  placeholder="elviskhoocreative@gmail.com" />
+          <input
+            type="text"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            placeholder="elviskhoocreative@gmail.com"
+          />
 
-          <button className="submit" onClick={userHandler}  >Submit</button>
+          <button className="submit" onClick={userHandler}>
+            Submit
+          </button>
         </Grid>
         <Grid item md={6} className="px-5">
           <div className="images d-flex justify-content-between">
             {/* profile  */}
-          <div>
-            <small>Cover</small>
-          <input type="file" onChange={(e) =>
-              setAvatar(e.target.value)
-            }
-            value={avatar}    />
-          </div>
+            <div>
+              <small>Cover</small>
+              <input
+                type="file"
+                onChange={(e) => setAvatar(e.target.value)}
+                value={avatar}
+              />
+            </div>
 
-          <div >
-            <small>Profile</small>
-          <input type="file" onChange={(e) =>
-              setPicture(e.target.value)
-            }
-            value={picture}  />
-          </div>
-               
-            
-
+            <div>
+              <small>Profile</small>
+              <input
+                type="file"
+                onChange={(e) => setPicture(e.target.value)}
+                value={picture}
+              />
+            </div>
 
             {/* <div className="img">
               <p className="text-center">Profile image</p>
@@ -134,18 +138,24 @@ function Account() {
 
           <p className="pt-md-5">账户链接</p>
           <div className="social">
-            <input type="text" onChange={(e) =>
-              setFacebook(e.target.value)
-            }
-            value={facebook} placeholder="facebook.com" />
-            <input type="text" onChange={(e) =>
-              setYoutube(e.target.value)
-            }
-            value={youtube} placeholder="youtube.com" />
-            <input type="text" onChange={(e) =>
-              setSkype(e.target.value)
-            }
-            value={skype} placeholder="skype.com" />
+            <input
+              type="text"
+              onChange={(e) => setFacebook(e.target.value)}
+              value={facebook}
+              placeholder="facebook.com"
+            />
+            <input
+              type="text"
+              onChange={(e) => setYoutube(e.target.value)}
+              value={youtube}
+              placeholder="youtube.com"
+            />
+            <input
+              type="text"
+              onChange={(e) => setSkype(e.target.value)}
+              value={skype}
+              placeholder="skype.com"
+            />
           </div>
         </Grid>
       </Grid>

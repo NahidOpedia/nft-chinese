@@ -8,10 +8,6 @@ function Landing() {
     <>
       <Banner />
       <Support />
-      {/* <Slider />
-      <Products />
-      <Recomandation />
-      <Newslatter /> */}
     </>
   );
 }

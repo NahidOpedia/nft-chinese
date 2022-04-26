@@ -15,7 +15,7 @@ import CustomizedSwitches from "../utils/SwitchC";
 function GetBetterDealsBanner() {
   return (
     <>
-      <div className="wrapper CreateBanner">
+      <div className="wrapper CreateBanner mt-md-5 pt-responsive">
         <Grid className="my-5 wrapper" container>
           <Grid item xl={6} md={6} xs={12}>
             <div className="banner">

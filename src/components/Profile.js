@@ -6,8 +6,9 @@ import Filter from "./Filter";
 import SingleProduct from "./SingleProduct";
 import YouTube from "./skletor";
 import propix from "../assects/market/Mask Group 5.png";
-import backpro from "../assects/market/fasdfs.png";
+import { FiCopy } from "react-icons/fi";
 import SingleProfile from "./SingleProfile";
+import { useSnackbar } from "notistack";
 
 // all menu list
 const menuTitle = [
@@ -20,6 +21,8 @@ function Profile({ filterName }) {
   const [seletedItem, setSeletedItem] = useState("全部");
   const [totlaProduct, setTotlaProduct] = useState(8);
   const [loaderSpin, setLoaderSpin] = useState(false);
+  const { enqueueSnackbar } = useSnackbar();
+  const [copiedtext, setCopiedtext] = useState("0xDE5D…6cfD");
 
   const filteredData = profileItem.filter((i) => i.category === seletedItem);
 
@@ -35,11 +38,19 @@ function Profile({ filterName }) {
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
-    let data = window.localStorage.getItem("userInfo")
-    setUserInfo(JSON.parse(data))
+    let data = window.localStorage.getItem("userInfo");
+    setUserInfo(JSON.parse(data));
   }, []);
 
-  const str = userInfo?.username
+  const str = userInfo?.username;
+
+  const handleClickVariant = () => {
+    navigator.clipboard.writeText(copiedtext);
+    enqueueSnackbar("Coppied successfull!", {
+      variant: "success",
+      autoHideDuration: 1000,
+    });
+  };
 
   return (
     <div className="productsection">
@@ -54,10 +65,13 @@ function Profile({ filterName }) {
         }}
       >
         <div className="img">
-          <img src={userInfo?.avatar}  alt="" />
+          <img src={userInfo?.avatar} alt="" />
         </div>
         <h4 className="name">{userInfo?.nickname}</h4>
-        <p className="id">{`${str?.slice(0,6)}...${str?.slice(str.length-4, str.length)} `}</p>
+        <p onClick={handleClickVariant} className="id">
+          <FiCopy />
+          {`${str?.slice(0, 6)}...${str?.slice(str.length - 4, str.length)} `}
+        </p>
         <p className="surname">编辑主页</p>
       </div>
       <div className="wrapper">

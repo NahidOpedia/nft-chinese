@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ButtonStock from "../utils/ButtonStock";
 import { RankingProductsdata, products } from "../utils/fakedata";
 import FilterR from "./FilterR";
@@ -35,14 +36,18 @@ function RankingProducts() {
         <Grid container>
           {seletedItem !== "热门创作者"
             ? filteredData.slice(0, totlaProduct).map((item) => (
-                <Grid item sm={12} xs={12}>
-                  <SingleRating item={item} />
-                </Grid>
+                <Link className="Link" to="/ranking-user/:id">
+                  <Grid item sm={12} xs={12}>
+                    <SingleRating item={item} />
+                  </Grid>
+                </Link>
               ))
             : RankingProductsdata.slice(0, totlaProduct).map((item) => (
-                <Grid item xs={12}>
-                  <SingleRating item={item} />
-                </Grid>
+                <Link className="Link" to="/ranking-user/:id">
+                  <Grid item xs={12}>
+                    <SingleRating item={item} />
+                  </Grid>
+                </Link>
               ))}
         </Grid>
 

@@ -30,7 +30,7 @@ function Search() {
   };
   useEffect(() => {}, []);
   return (
-    <div className="productsection">
+    <div className="productsection mt-md-5 pt-responsive">
       <div className="wrapper">
         <Grid container>
           {search.slice(0, totlaProduct).map((item) => (

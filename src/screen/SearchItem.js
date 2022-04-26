@@ -32,7 +32,7 @@ function SearchItem({ filterName }) {
   };
   useEffect(() => {}, []);
   return (
-    <div className="productsection">
+    <div className="productsection mt-md-5  pt-responsive">
       <div className="profile">
         <div className="img">
           <img src={search[0].image} alt="" />

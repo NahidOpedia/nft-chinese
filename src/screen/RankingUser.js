@@ -18,14 +18,16 @@ import OptionUnstyled, {
 } from "@mui/base/OptionUnstyled";
 import PopperUnstyled from "@mui/base/PopperUnstyled";
 import { styled } from "@mui/system";
-import CollapsibleTable from "../utils/CollapedC";
+import { FiCopy } from "react-icons/fi";
 import { useParams } from "react-router-dom";
+import { useSnackbar } from "notistack";
 
 import { server } from "../config/index";
 import axios from "axios";
 
-function SearchUser() {
+function RankingUser() {
   const [detail, setDetail] = useState([]);
+  const { enqueueSnackbar } = useSnackbar();
 
   let { id } = useParams();
 
@@ -40,6 +42,7 @@ function SearchUser() {
   const [totlaProduct, setTotlaProduct] = useState(8);
   const [loaderSpin, setLoaderSpin] = useState(false);
   const [sidebar, setSidebar] = useState(false);
+  const [copiedtext, setCopiedtext] = useState("0xDE5D…6cfD");
 
   const usersidebar = () => {
     setSidebar(!sidebar);
@@ -47,7 +50,7 @@ function SearchUser() {
 
   const filteredData = search.filter((i) => i.category === seletedItem);
 
-  const filterlist = ["全部", "冒险"];
+  const filterlist = ["全部", "冒sa险", "全d部", "冒s险"];
 
   const loadmorehandler = () => {
     setLoaderSpin(true);
@@ -63,16 +66,17 @@ function SearchUser() {
       localStorage.getItem("defaultAddress")
     ) {
       getUser();
-      // window.clearTimeout(this.timer)
-      // this.getUser()
-      // this.get_nft_list()
-      // this.get_coins()
     } else {
-      //如果检测到没有注入tronWeb对象，则等待100ms后重新检测
-      //return
-      // this.timer = setTimeout(this.waitForGlobal, 100)
     }
   }, [detail]);
+
+  const handleClickVariant = () => {
+    navigator.clipboard.writeText(copiedtext);
+    enqueueSnackbar("Coppied successfull!", {
+      variant: "success",
+      autoHideDuration: 1000,
+    });
+  };
   return (
     <div
       className="productsection mt-md-5  pt-responsive"
@@ -94,6 +98,10 @@ function SearchUser() {
         </div>
         <div className="background">
           <h4 className="name">Elvis Khoo</h4>
+
+          <p onClick={() => handleClickVariant()} className="text-center token">
+            <FiCopy /> 0xDE5D…6cfD
+          </p>
 
           <div className="badges">
             <div className="d-flex justify-content-between maindiagramdiv">
@@ -144,7 +152,7 @@ function SearchUser() {
 
       <div className="wrapper" style={{ borderTop: "1px solid #e6e6e6" }}>
         <Grid container>
-          <Grid item xl={sidebar ? 2 : 1} lg={sidebar ? 2 : 1}>
+          {/* <Grid item xl={sidebar ? 2 : 1} lg={sidebar ? 2 : 1}>
             {!sidebar ? (
               <div className="sidebar">
                 <AiOutlineMenu className="sidebaricon" onClick={usersidebar} />
@@ -165,12 +173,14 @@ function SearchUser() {
                 <CollapsibleTable />
               </div>
             )}
-          </Grid>
+          </Grid> */}
           <Grid
-            className="px-4"
+            className="px-md-4"
             item
-            xl={sidebar ? 10 : 11}
-            lg={sidebar ? 10 : 11}
+            xl={12}
+            lg={12}
+            // xl={sidebar ? 10 : 11}
+            // lg={sidebar ? 10 : 11}
           >
             <Grid container className="mb-1">
               <Grid className="p-2" item md={6} xs={12}>
@@ -195,7 +205,7 @@ function SearchUser() {
             <h2 className="TotalItem">30 items</h2>
             <Grid container>
               {search.slice(0, totlaProduct).map((item) => (
-                <Grid item xl={2.4} lg={3} md={4} sm={6} xs={12}>
+                <Grid item xl={2.4} lg={3} md={4} xs={6}>
                   <Link className="Link" to="/moreAboutItem">
                     <SingleProduct item={item} />
                   </Link>
@@ -221,7 +231,7 @@ function SearchUser() {
   );
 }
 
-export default SearchUser;
+export default RankingUser;
 
 const blue = {
   100: "#DAECFF",

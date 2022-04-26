@@ -1,11 +1,12 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ButtonFill from "../utils/ButtonFill";
 import ButtonStock from "../utils/ButtonStock";
 
 import banner1 from "../assects/home/Covid Alien.png";
 import tick from "../assects/home/Tick Icon_Grey.svg";
+import tickActive from "../assects/Tick Icon_Grey.svg";
 import banner2 from "../assects/home/Group 182.png";
 import banner3 from "../assects/home/Group 183.png";
 import SectionHeader from "./SectionHeader";
@@ -14,9 +15,12 @@ import CustomizedSwitches from "../utils/SwitchC";
 import PrimaryButtonF from "../utils/PrimaryButtonF";
 
 function CreateBanner() {
+  const [radiobutton, setRadiobutton] = useState("");
+  const [uploadRadiobutton, setUploadRadiobutton] = useState("");
+
   return (
     <>
-      <div className="wrapper CreateBanner">
+      <div className="wrapper CreateBanner mt-md-5 pt-responsive">
         <Grid className="my-5 wrapper" container>
           <Grid item xl={6} md={6} xs={12}>
             <div className="banner">
@@ -80,41 +84,55 @@ function CreateBanner() {
                 <span className="getdealtitla">
                   PDF, PPT, PNG, JPG (max 8mb)
                 </span>
-                <PrimaryButtonF title="添加文件" />
+                <PrimaryButtonF title="添加作品" />
               </div>
             </Grid>
 
             <Grid className="py-5" item md={12} lg={6} xs={12}>
               <div className="right getbetterRight">
                 {/* <p className="">名称</p> */}
-                <input type="text" placeholder="名称" />
-                <input type="text" placeholder="联络方式" />
-                <input type="text" placeholder="电子邮件" />
+                <input type="text" placeholder="NFT 名称" />
+                <textarea type="text" placeholder="NFT 描述 (最多 300 个字)" />
+                <input type="text" placeholder="NFT 价格 -- BNB" />
                 {/* <p className="">联络方式</p>
                 <p className="">电子邮件</p> */}
-                <input
-                  className="pb-10"
-                  type="text"
-                  placeholder="NFT 项目描述（最多 300 个字)"
-                />
+                <input type="text" placeholder="版权" />
                 {/* <p className="pb-10">NFT 项目描述（最多 300 个字)</p> */}
                 <div className="total mt-5 px-4 pt-2">
-                  <span className="totaltitle">立即列印</span>
+                  <span className="totaltitle">服务费</span>
                   <span className="totaltitle">5%</span>
                 </div>
-                <div className="total mt-4 px-4">
-                  <span className="totaltitle">买方列印</span>
+                <div
+                  className="total mt-4 px-4"
+                  onClick={() => setUploadRadiobutton("U立即铸造")}
+                >
+                  <span className="totaltitle">立即铸造</span>
                   <div className="img">
-                    <img src={tick} alt="" />
+                    <img
+                      src={
+                        uploadRadiobutton === "U立即铸造" ? tickActive : tick
+                      }
+                      alt=""
+                    />
                   </div>
                 </div>
-                <div className="total mt-4 px-4">
-                  <span className="totaltitle">隐藏直到列印</span>
+                <div
+                  className="total mt-4 px-4"
+                  onClick={() => setUploadRadiobutton("U隐藏直到铸造")}
+                >
+                  <span className="totaltitle">隐藏直到铸造</span>
                   <div className="img">
-                    <img src={tick} alt="" />
+                    <img
+                      src={
+                        uploadRadiobutton === "U隐藏直到铸造"
+                          ? tickActive
+                          : tick
+                      }
+                      alt=""
+                    />
                   </div>
                 </div>
-                <p className="getbetterbutton px-2  py-3">提交</p>
+                <p className="getbetterbutton px-2  py-3">创建单个 NFT</p>
               </div>
             </Grid>
           </Grid>
@@ -140,53 +158,51 @@ function CreateBanner() {
             </Grid>
             <Grid className="p-4" item md={6} xs={12}>
               <div className="right pt-4">
-                <h5 className="py-2">NFT 名称</h5>
-                <h5>列印价格</h5>
+                <input type="text" placeholder="NFT 名称" />
+                <input type="text" placeholder="列印价格 - BNB" />
 
                 {/* radio buttons  */}
                 <div
                   style={{ alignItems: "end" }}
-                  className="form-check d-flex justify-content-between "
+                  onClick={() => setRadiobutton("立即铸造")}
+                  className="form-check my-2 d-flex justify-content-between "
                 >
-                  <label className="form-check-label" for="flexRadioDefault1">
-                    立即列印
-                  </label>
-                  <input
-                    className="totaltitle form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
+                  <span className="totaltitle">立即铸造</span>
+                  {/* <label className="form-check-label" for="flexRadioDefault1">
+                    立即铸造
+                  </label> */}
+                  <div className="img">
+                    <img
+                      src={radiobutton === "立即铸造" ? tickActive : tick}
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div
                   style={{ alignItems: "end" }}
-                  className="form-check d-flex justify-content-between "
+                  onClick={() => setRadiobutton("买方铸造")}
+                  className="form-check my-2 d-flex justify-content-between "
                 >
-                  <label className="form-check-label" for="flexRadioDefault2">
-                    买方列印
-                  </label>
-                  <input
-                    className="totaltitle form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                    checked
-                  />
+                  <span className="totaltitle">买方铸造</span>
+                  <div className="img">
+                    <img
+                      src={radiobutton === "买方铸造" ? tickActive : tick}
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div
                   style={{ alignItems: "end" }}
-                  className="form-check d-flex justify-content-between "
+                  onClick={() => setRadiobutton("隐藏直到铸造")}
+                  className="form-check my-2 d-flex justify-content-between "
                 >
-                  <label className="form-check-label" for="flexRadioDefault2">
-                    隐藏直到列印
-                  </label>
-                  <input
-                    className="totaltitle form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                    checked
-                  />
+                  <span className="totaltitle">隐藏直到铸造</span>
+                  <div className="img">
+                    <img
+                      src={radiobutton === "隐藏直到铸造" ? tickActive : tick}
+                      alt=""
+                    />
+                  </div>
                 </div>
                 {/* radio buttons  */}
 

@@ -1013,12 +1013,6 @@
   .navbar ul li {
     margin-left: 10px !important  ;
   }
-  /* .search { */
-  /* margin-left: 56px; */
-  /* } */
-  .itemBanner h1 {
-    font-size: 40px !important;
-  }
   h1 {
     font-family: Montserrat;
     font-style: normal;
@@ -1256,7 +1250,7 @@
   }
 
   .itemBanner {
-    padding: 30px 0px !important;
+    padding: 90px 0px !important;
   }
   .flowmain {
     margin: 50px 0 0px;

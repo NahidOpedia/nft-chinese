@@ -71,7 +71,7 @@ export default class Slidermusic extends React.Component {
   };
   render() {
     return (
-      <div className="wrapper pt-5 mt-5">
+      <div className="wrapper pt-5 mt-md-5 pt-responsive">
         <p className="headertitle">
           <img src={fire} alt="" /> 年度最佳
         </p>
@@ -88,22 +88,20 @@ export default class Slidermusic extends React.Component {
             {...settings}
           >
             {/* <Link href="/s"> */}
-            {
-             this.props.arts.map((art,index)=>{
-                return (
-                  <div key={index} className="p-3">
+            {this.props.arts.map((art, index) => {
+              return (
+                <div key={index} className="p-3">
                   <div className="slideritem p-4">
                     <div className="img">
                       <img className="img-fluid" src={art?.avatar} alt="cat" />
                     </div>
-                    <p className="number">0{index+1}</p>
+                    <p className="number">0{index + 1}</p>
                     <p className="title">{art.nickname || art.username}</p>
                     <p className="price">{art.num} BNB</p>
                   </div>
                 </div>
-                )
-              })
-            }
+              );
+            })}
           </Slider>
         </div>
       </div>

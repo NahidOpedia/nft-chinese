@@ -16,7 +16,7 @@ function Connect() {
     const handleOpen = () => setOpen(true);
   };
   return (
-    <div className="connectMain">
+    <div className="connectMain mt-md-5 pt-responsive">
       <div className="wrapper">
         <Grid container>
           <Grid item xl={6} md={6} xs={12} className="connectheader">

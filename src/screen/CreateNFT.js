@@ -5,7 +5,7 @@ import redtick from "../assects/home/Next Button.svg";
 
 function CreateNFT() {
   return (
-    <div className="CreateNFT">
+    <div className="CreateNFT mt-md-5 pt-responsive">
       <div className="wrapper">
         <Grid container className="pb-5">
           <Grid className="px-4" item xl={4} lg={6} md={6} xs={12}>

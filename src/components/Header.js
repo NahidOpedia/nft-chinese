@@ -3,18 +3,12 @@ import { Link } from "react-router-dom";
 import "../Styles/header.css";
 
 import logo from "../assects/brandLogo.png";
-import searchimg from "../assects/market/AstroNutzNFT.png";
-import searchimg1 from "../assects/market/Axie Infinity.png";
-import searchimg2 from "../assects/market/Pyromaniacs.png";
-import searchimg4 from "../assects/market/The Sandbox.png";
-import signinuser from "../assects/home/user.jpg";
 import menubar from "../assects/home/menu.svg";
 import menubarX from "../assects/menubar/cross.svg";
 import arrowM from "../assects/menubar/Next Button.svg";
 import arrowB from "../assects/menubar/Previous Button.svg";
 import country from "../assects/home/america.jpg";
 import userPink from "../assects/menubar/pinkprofile.svg";
-import profilePink from "../assects/menubar/Profile Picture_Pink.png";
 
 import twitter from "../assects/home/Twitter Icon.svg";
 import instra from "../assects/home/Instagram Icon.svg";
@@ -26,7 +20,7 @@ import metamask from "../assects/connect/Metamask_Logo-01.png";
 import tronlink from "../assects/connect/Tronlink Wallet_Logo-01.png";
 import CustomizedSwitches from "../utils/SwitchC";
 import { server } from "../config";
-import axios from 'axios'
+import axios from "axios";
 
 function Header(props) {
   const [active, setActive] = useState("Home");
@@ -34,35 +28,34 @@ function Header(props) {
   const [isdropdown, setIsdropdown] = useState(false);
 
   const [submenus, setSubmenus] = useState("mainsub");
- const [collections, setCollections] = useState([])
- const [users, setUsers] = useState([])
+  const [collections, setCollections] = useState([]);
+  const [users, setUsers] = useState([]);
 
- const [searchCollections, setSearchCollections] = useState([]);
- const [searchUsers, setSearchUsers] = useState([]);
+  const [searchCollections, setSearchCollections] = useState([]);
+  const [searchUsers, setSearchUsers] = useState([]);
 
-  
   useEffect(() => {
     console.log(active);
   }, [active]);
 
   const searchHandler = (e) => {
-     let searchTerm = e.target.value;
-      const newCollectionList = collections.filter(collection=>{
-          return collection.name.toLowerCase().includes(searchTerm.toLowerCase())
-      })
-      const newUserList = users.filter(user=>{
-          return user.nickname.toLowerCase().includes(searchTerm.toLowerCase())
-      })
-        if(searchTerm !== ''){
-          setSearchCollections(newCollectionList);
-          setSearchUsers(newUserList);
-        }else{
-          setSearchCollections([]);
-          setSearchUsers([]);
-        }
-        console.log(users)
-        setIsSearch(e.target.value);
-      };
+    let searchTerm = e.target.value;
+    const newCollectionList = collections.filter((collection) => {
+      return collection.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    const newUserList = users.filter((user) => {
+      return user.nickname.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    if (searchTerm !== "") {
+      setSearchCollections(newCollectionList);
+      setSearchUsers(newUserList);
+    } else {
+      setSearchCollections([]);
+      setSearchUsers([]);
+    }
+    console.log(users);
+    setIsSearch(e.target.value);
+  };
 
   const handleSearch = () => {
     window.location.href = "/search";
@@ -77,50 +70,49 @@ function Header(props) {
     localStorage.setItem("logedIn", false);
   };
 
-  const logoutHandler = async() => {
+  const logoutHandler = async () => {
     await axios
-    .post(`${server}/api/user/loginout`,{}, {
-      headers: {
-        Token: localStorage.getItem('Token'),
-      },
-    })
-    .then(res=> {
-      if(res.data.code==40200 || res.data.code == 0){
-          alert(res.data.msg)  
-      }
-    } 
+      .post(
+        `${server}/api/user/loginout`,
+        {},
+        {
+          headers: {
+            Token: localStorage.getItem("Token"),
+          },
+        }
       )
-    console.log('log OUt successfully')
-      window.localStorage.removeItem("Token")
-      window.localStorage.removeItem("defaultAddress")
-      window.localStorage.removeItem("userInfo")
-      window.localStorage.removeItem("lang")
+      .then((res) => {
+        if (res.data.code == 40200 || res.data.code == 0) {
+          alert(res.data.msg);
+        }
+      });
+    console.log("log OUt successfully");
+    window.localStorage.removeItem("Token");
+    window.localStorage.removeItem("defaultAddress");
+    window.localStorage.removeItem("userInfo");
+    window.localStorage.removeItem("lang");
   };
 
   const [userInfo, setUserInfo] = useState(null);
 
-const searchItems = async ()=>{
+  const searchItems = async () => {
     await axios
-    .get(`${server}/api/main/search`,{
-      headers:{
-        Token: window.localStorage.getItem('Token')
-      }
-    }
-    ).then(res => {
-      setCollections(res.data.data.series)
-      setUsers(res.data.data.user)
-    })
-}
+      .get(`${server}/api/main/search`, {
+        headers: {
+          Token: window.localStorage.getItem("Token"),
+        },
+      })
+      .then((res) => {
+        setCollections(res.data.data.series);
+        setUsers(res.data.data.user);
+      });
+  };
 
-
-
-  useEffect(()=>{
+  useEffect(() => {
     searchItems();
-    let data = window.localStorage.getItem("userInfo")
-    setUserInfo(JSON.parse(data))
-  },[isSearch])
-
-
+    let data = window.localStorage.getItem("userInfo");
+    setUserInfo(JSON.parse(data));
+  }, [isSearch]);
 
   return (
     // <div className="navbar">
@@ -154,13 +146,16 @@ const searchItems = async ()=>{
                 <li className="search-item">收藏品</li>
 
                 {/* items */}
-               {
-                 searchCollections.length > 0 ?  searchCollections?.map(item=>{
-                   return (
+                {searchCollections.length > 0 ? (
+                  searchCollections?.map((item) => {
+                    return (
                       <Link
                         onClick={() => setIsSearch(null)}
                         className="Link"
-                        to={'/series/'+ window.localStorage.getItem('defaultAddress')}
+                        to={
+                          "/series/" +
+                          window.localStorage.getItem("defaultAddress")
+                        }
                       >
                         <div className="search-list-item">
                           <div className="search-author">
@@ -170,25 +165,26 @@ const searchItems = async ()=>{
                           <span className="items">{item?.series_id} items</span>
                         </div>
                       </Link>
-                   )
-                 }) : 
-                    <div className="search-list-item ">
-                        <div className="search-author ">
-                          <p>No Collections found </p>
-                        </div>
+                    );
+                  })
+                ) : (
+                  <div className="search-list-item ">
+                    <div className="search-author ">
+                      <p>No Collections found </p>
                     </div>
-               }
-               
+                  </div>
+                )}
+
                 {/* items */}
                 <li className="search-item">用户</li>
                 {/* items */}
-                {
-                  searchUsers.length > 0 ? searchUsers?.map(user=>{
+                {searchUsers.length > 0 ? (
+                  searchUsers?.map((user) => {
                     return (
                       <Link
                         onClick={() => setIsSearch(null)}
                         className="Link"
-                        to={'/user/'+user.sale_uid}
+                        to={"/user/" + user.sale_uid}
                       >
                         <div className="search-list-item">
                           <div className="search-author">
@@ -198,15 +194,15 @@ const searchItems = async ()=>{
                         </div>
                         {/* items */}
                       </Link>
-                    )
-                  }) : 
+                    );
+                  })
+                ) : (
                   <div className="search-list-item ">
-                  <div className="search-author ">
-                    <p>No User Found</p>
+                    <div className="search-author ">
+                      <p>No User Found</p>
+                    </div>
                   </div>
-                </div>
-                }
-           
+                )}
               </ul>
             </div>
           </div>
@@ -509,7 +505,10 @@ const searchItems = async ()=>{
                               borderRadius: "50%",
                               // marginRight: "10px",
                             }}
-                            onClick={() => {handledropdownmenu(); logoutHandler()}}
+                            onClick={() => {
+                              handledropdownmenu();
+                              logoutHandler();
+                            }}
                             src={arrowM}
                             alt=""
                           />
@@ -549,29 +548,26 @@ const searchItems = async ()=>{
                     )}
                     <div className="p-4 d-flex justify-content-between">
                       <div className="img">
-                        <Link to = '/'>
-                            <img
-                              style={{ width: "138px", height: "60px" }}
-                              src={logo}
-                              alt="alt"
-                            />
+                        <Link to="/">
+                          <img
+                            style={{ width: "138px", height: "60px" }}
+                            src={logo}
+                            alt="alt"
+                          />
                         </Link>
                       </div>
                       <div className="social-logos">
-                          
-                            <Link className="Link p-2" to='facebook.com'>
-                            <img src={twitter} alt="email" />
-                          </Link>
+                        <Link className="Link p-2" to="facebook.com">
+                          <img src={twitter} alt="email" />
+                        </Link>
 
-                            <Link className="Link p-2" to='facebook.com'>
-                            <img src={instra} alt="facebook" />
-                          </Link>
-                          
+                        <Link className="Link p-2" to="facebook.com">
+                          <img src={instra} alt="facebook" />
+                        </Link>
+
                         {/* <Link className="Link p-2" to="www.facebook.com">
                           <img src={instra} alt="alt" />
                         </Link> */}
-
-
 
                         <Link className="Link p-2" to="www.facebook.com">
                           <img src={telogram} alt="alt" />
@@ -595,18 +591,13 @@ const searchItems = async ()=>{
 
 export default Header;
 
-function Wallet({setSubmenus, handledropdownmenu }) {
-
+function Wallet({ setSubmenus, handledropdownmenu }) {
   const [userInfo, setUserInfo] = useState(null);
 
-
-  useEffect(()=>{
-    let data = window.localStorage.getItem("userInfo")
-    setUserInfo(JSON.parse(data))
-  },[])
-
-
-  
+  useEffect(() => {
+    let data = window.localStorage.getItem("userInfo");
+    setUserInfo(JSON.parse(data));
+  }, []);
 
   return (
     <div
@@ -627,10 +618,7 @@ function Wallet({setSubmenus, handledropdownmenu }) {
 
       <div className="ammoundbox">
         <p>总余额</p>
-        <h1>{ userInfo?.bnb.slice(
-          0,
-          userInfo?.bnb.indexOf('.') + 3
-        )}</h1>
+        <h1>{userInfo?.bnb.slice(0, userInfo?.bnb.indexOf(".") + 3)}</h1>
         {/* <h1> { Web3.utils.fromWei(`${(userInfo?.bnb)?.split('.')?.join()}` , 'ether')} BNB</h1> */}
         <div className="footer">
           <p>增加资金</p>

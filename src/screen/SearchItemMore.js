@@ -51,7 +51,7 @@ function SearchItemMore({ filterName }) {
   useEffect(() => {}, []);
   return (
     <>
-      <div className="productsection wrapper">
+      <div className="productsection wrapper mt-md-5  pt-responsive">
         <div className="profileItem">
           <Grid container>
             <Grid item md={6} xs={12}>
