@@ -1,28 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Slider from "react-slick";
-// import ArrowLeft from "@material-ui/icons/AcUnit";
-// import ArrowRight from "@material-ui/icons/ArrowRight";
 import { ButtonBase } from "@mui/material";
 
 // images
 import rightArrow from "../assects/market/Next Button.svg";
 import leftArrow from "../assects/market/Previous Button.svg";
+
 // slider image
-import Axie from "../assects/market/Axie Infinity@2x.png";
-import Cryprtokitties from "../assects/market/Cryprtokitties@2x.png";
-import Gods from "../assects/market/Gods Unchained@2x.png";
-import Sandbox from "../assects/market/The Sandbox@2x.png";
 import fire from "../assects/market/Hot Icon.svg";
 
 // latest
-import monas from "../assects/market/Group232@2x.png";
-import sb from "../assects/market/Group233@2x.png";
-import trexa from "../assects/market/Group234@2x.png";
-
-// import banner from "../assects/market/Group_62@2x.png";
-
-// import Link from "@material-ui/core/Link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -54,6 +41,7 @@ var settings = {
     },
   ],
 };
+
 export default class BannerSlider extends React.Component {
   renderArrows = () => {
     return (
@@ -108,7 +96,6 @@ export default class BannerSlider extends React.Component {
                 ></div>
               </div>
             ))}
-
             {/* </Link> */}
           </Slider>
         </div>

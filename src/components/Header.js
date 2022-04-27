@@ -217,13 +217,11 @@ function Header(props) {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          {/* <span class="navbar-toggler-icon"></span> */}
           <img
             style={{
               height: "50px",
               width: "50px",
               borderRadius: "50%",
-              // marginRight: "10px",
             }}
             src={menubar}
             alt=""
@@ -247,26 +245,15 @@ function Header(props) {
 
               {/* dropdownmenu */}
               <ul class="dropdown">
-                {/* <li>
-                  <a href="#">Sub-1</a>
-                </li>
-                <li>
-                  <a href="#">Sub-2</a>
-                </li>
-                <li>
-                  <a href="#">Sub-3</a>
-                </li> */}
+              
                 <li class="nav-item" onClick={() => setActive("page2")}>
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    // style={{ color: "red" }}
                   >
                     <Link
                       onClick={() => setActive("create")}
                       className={`Link ${active === "create" && "active"}`}
-                      // className={`Link ${active === "page2" && "active"}`}
-                      // to="/market"
                       to="/art"
                     >
                       Art
@@ -277,12 +264,10 @@ function Header(props) {
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    // style={{ color: "red" }}
                   >
                     <Link
                       onClick={() => setActive("create")}
                       className={`Link ${active === "create" && "active"}`}
-                      // className={`Link ${active === "page2" && "active"}`}
                       to="/music"
                     >
                       music
@@ -293,12 +278,10 @@ function Header(props) {
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    // style={{ color: "red" }}
                   >
                     <Link
                       onClick={() => setActive("create")}
                       className={`Link ${active === "create" && "active"}`}
-                      // className={`Link ${active === "page2" && "active"}`}
                       to="/game"
                     >
                       game
@@ -311,12 +294,10 @@ function Header(props) {
               <a
                 class="nav-link active"
                 aria-current="page"
-                // style={{ color: "red" }}
               >
                 <Link
                   onClick={() => setActive("connect")}
                   className={`Link ${active === "connect" && "active"}`}
-                  // className={`Link ${active === "page2" && "active"}`}
                   to="/connect"
                 >
                   创建
@@ -331,7 +312,6 @@ function Header(props) {
                 style={{ color: "red" }}
               >
                 <Link
-                  // className={`Link`}
                   className={`Link ${active === "blog" && "active"}`}
                   to="/blog"
                 >
@@ -385,7 +365,6 @@ function Header(props) {
                           height: "50px",
                           width: "50px",
                           borderRadius: "50%",
-                          // marginRight: "10px",
                         }}
                         src={country}
                         alt=""
@@ -401,23 +380,13 @@ function Header(props) {
                         height: "50px",
                         width: "50px",
                         borderRadius: "50%",
-                        // marginRight: "10px",
                       }}
                       src={country}
                       alt=""
                     />
                   </Link>
                 </div>
-                // <a
-                //   class="nav-link active"
-                //   aria-current="page"
-                //   href="#"
-                //   style={{ color: "red" }}
-                // >
-                //   <Link className={`Link `} to="/signin">
-                //     Sign In
-                //   </Link>
-                // </a>
+        
               )}
             </li>
             <li
@@ -432,7 +401,6 @@ function Header(props) {
                     height: "50px",
                     width: "50px",
                     borderRadius: "50%",
-                    // marginRight: "10px",
                   }}
                   onClick={() => handledropdown()}
                   src={isdropdown ? menubarX : menubar}
@@ -452,7 +420,6 @@ function Header(props) {
                               height: "40px",
                               width: "40px",
                               borderRadius: "50%",
-                              // marginRight: "10px",
                             }}
                             onClick={() => {
                               setSubmenus("coins");
@@ -475,7 +442,6 @@ function Header(props) {
                                 height: "40px",
                                 width: "40px",
                                 borderRadius: "50%",
-                                // marginRight: "10px",
                               }}
                               src={arrowM}
                               alt=""
@@ -489,7 +455,6 @@ function Header(props) {
                               height: "40px",
                               width: "40px",
                               borderRadius: "50%",
-                              // marginRight: "10px",
                             }}
                             onClick={() => handledropdownmenu()}
                             src={arrowM}
@@ -503,7 +468,6 @@ function Header(props) {
                               height: "40px",
                               width: "40px",
                               borderRadius: "50%",
-                              // marginRight: "10px",
                             }}
                             onClick={() => {
                               handledropdownmenu();

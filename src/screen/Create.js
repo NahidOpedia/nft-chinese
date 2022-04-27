@@ -5,11 +5,6 @@ function Create() {
   return (
     <>
       <CreateBanner />
-      {/* <CreateSupport /> */}
-      {/* <Slider />
-      <Products />
-      <Recomandation />
-      <Newslatter /> */}
     </>
   );
 }

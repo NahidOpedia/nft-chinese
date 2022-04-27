@@ -174,14 +174,7 @@ function RankingUser() {
               </div>
             )}
           </Grid> */}
-          <Grid
-            className="px-md-4"
-            item
-            xl={12}
-            lg={12}
-            // xl={sidebar ? 10 : 11}
-            // lg={sidebar ? 10 : 11}
-          >
+          <Grid className="px-md-4" item xl={12} lg={12}>
             <Grid container className="mb-1">
               <Grid className="p-2" item md={6} xs={12}>
                 <input
@@ -194,11 +187,6 @@ function RankingUser() {
                 <UnstyledSelectSimple />
               </Grid>
               <Grid className="p-2" item md={3} xs={6}>
-                {/* <input
-                  className="profileinput"
-                  type="text"
-                  placeholder="最近获得"
-                /> */}
                 <UnstyledSelectSimple />
               </Grid>
             </Grid>

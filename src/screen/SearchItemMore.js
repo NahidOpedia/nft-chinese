@@ -35,19 +35,6 @@ function SearchItemMore({ filterName }) {
     }, 1000);
   };
 
-  // function SingleBlogDetails() {
-
-  //   const [detail, setDetail] = useState([])
-
-  //   let { id } = useParams();
-  //   const blogDetails = async ()=>{
-  //     await axios
-  //   .get(`${server}/api/main/newsdetail/?id=${id}`
-  //   ).then(res => {
-  //     setDetail(res.data.data)
-  //   })
-  //   }
-
   useEffect(() => {}, []);
   return (
     <>
@@ -60,12 +47,15 @@ function SearchItemMore({ filterName }) {
               </div>
             </Grid>
             <Grid item md={6} xs={12}>
-              <h1>Pyromaniac 0678</h1>
-              <p>NFT 合集描述段 01 </p>
-              <p>NFT 合集描述段 01 </p>
-              <p>NFT 合集描述段 01 </p>
-              <p>NFT 合集描述段 01 </p>
-              <p>NFT 合集描述段 01 </p>
+              <div className="description">
+                <h1>Pyromaniac 0678</h1>
+                <p>NFT 合集描述段 01 </p>
+                <p>NFT 合集描述段 01 </p>
+                <p>NFT 合集描述段 01 </p>
+                <p>NFT 合集描述段 01 </p>
+                <p>NFT 合集描述段 01 </p>
+              </div>
+
               <h1>1 BNB</h1>
               <ButtonFill styleC={{ width: "100%" }} title="购买" />
               <Filter

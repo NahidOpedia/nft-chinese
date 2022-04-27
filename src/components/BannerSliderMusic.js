@@ -1,8 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Slider from "react-slick";
-// import ArrowLeft from "@material-ui/icons/AcUnit";
-// import ArrowRight from "@material-ui/icons/ArrowRight";
 import { ButtonBase } from "@mui/material";
 
 // images
@@ -11,10 +8,6 @@ import leftArrow from "../assects/market/Previous Button.svg";
 
 import fire from "../assects/market/Hot Icon.svg";
 
-// latest
-import sb from "../assects/music/Group65@2x.png";
-
-// import Link from "@material-ui/core/Link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

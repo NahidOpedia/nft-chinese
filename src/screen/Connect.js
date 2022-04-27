@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 import Binance from "../assects/connect/Binance_Logo.png";
 import Metamask from "../assects/connect/Metamask_Logo-01.png";
-import Tronlink from "../assects/connect/Tronlink Wallet_Logo-01.png";
 
 import ModalC from "../utils/ModalC";
 
@@ -36,7 +35,6 @@ function Connect() {
               </div>
               <div className="option">
                 <ModalC name="Binance" logo={Binance} />
-                {/* <BsCircle onClick={() => optionHandler("Binance")} /> */}
               </div>
             </div>
 
@@ -48,20 +46,8 @@ function Connect() {
               </div>
               <div className="option">
                 <ModalC name="Metamask" logo={Metamask} />
-                {/* <BsCircle onClick={() => optionHandler("Metamask")} /> */}
               </div>
             </div>
-
-            {/* 4th */}
-            {/* <div className="connectionitem d-flex justify-content-between">
-              <div className="img d-flex">
-                <img className="img-fluid" src={Tronlink} alt="" />
-                <p className="connectionName">Tronlink</p>
-              </div>
-              <div className="option">
-                <ModalC name="Tronlink" logo={Tronlink} />
-              </div>
-            </div> */}
 
             {/* last */}
             <div className="connectionitem d-flex justify-content-between">

@@ -7,7 +7,6 @@ import axios from "axios";
 import {server} from '../config/index'
 
 function Game() {
-
   const [arts,setArts] = useState([]);
   const [classify,setClassify] = useState(null);
 
@@ -31,7 +30,6 @@ function Game() {
   })
   }
 
-
   useEffect(()=>{
     getSales()
     classifydetail();
@@ -42,7 +40,6 @@ function Game() {
       {
         classify !== null &&  <BannerSliderGame classify = {classify}/>
       }
-      
       <ProductsGame />
     </>
   );

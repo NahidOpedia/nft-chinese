@@ -37,7 +37,6 @@ function Banner() {
             <Grid className="p-4" item xl={4} md={6} xs={12}>
               <div className="itemBanner">
                 <h1>create</h1>
-                {/* <h1></h1> */}
               </div>
               <div className="des">
                 <h3>轻松创建您的 NFT</h3>

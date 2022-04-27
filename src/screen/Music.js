@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import BannerSliderMusic from "../components/BannerSliderMusic";
-
 import ProductsMusic from "../components/ProductsMusic";
 import Slidermusic from "../components/Slidermusic";
 
-// import CreateSupport from "../components/create/Support";
 import axios from "axios";
 import {server} from '../config/index'
 
@@ -44,8 +42,6 @@ function Music() {
       {
         classify !== null &&   <BannerSliderMusic classify = {classify} />
       }
-      
-    
       <ProductsMusic />
     </>
   );

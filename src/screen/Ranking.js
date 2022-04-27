@@ -14,15 +14,9 @@ function Ranking() {
       {/* <CreateBanner /> */}
       {window.matchMedia("(max-width: 767px)").matches && <RankingSlider />}
 
-      {/* frame main */}
+      {/* frome main */}
       <RankingProducts />
       {window.matchMedia("(min-width: 768px)").matches && <RankingComp />}
-
-      {/* <CreateSupport /> */}
-      {/* <Slider />
-      <Products />
-      <Recomandation />
-      <Newslatter /> */}
     </>
   );
 }

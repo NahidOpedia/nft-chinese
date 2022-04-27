@@ -1,16 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BannerSlider from "../components/BannerSlider";
-import CreateBanner from "../components/CreateBanner";
-import Filter from "../components/Filter";
-// import CreateBanner from "../components/create/Banner";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Newslatter from "../components/Newslatter";
 import Products from "../components/Products";
-import Recomandation from "../components/Recomandation";
 import SliderC from "../components/Slider";
-import TestimonialSlider from "../components/TestimonialSlider";
-// import CreateSupport from "../components/create/Support";
 import axios from "axios";
 import { server } from "../config/index";
 

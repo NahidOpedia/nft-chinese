@@ -17,19 +17,12 @@ function SingleBlogDetails() {
   console.log(detail);
 
   useEffect(() => {
-    // window.clearTimeout(this.timer)
     if (
       localStorage.getItem("Token") &&
       localStorage.getItem("defaultAddress")
     ) {
-      // window.clearTimeout(this.timer)
       blogDetails();
-    } else {
-      console.log("please Wait");
-      //如果检测到没有注入tronWeb对象，则等待100ms后重新检测
-      //return
-      // this.timer = setTimeout(this.waitForGlobal, 100)
-    }
+    } else {}
   }, [id]);
 
   return (

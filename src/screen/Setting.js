@@ -56,23 +56,7 @@ function Account() {
   const [youtube, setYoutube] = useState("");
   const [skype, setSkype] = useState("");
 
-  const userHandler = async () => {
-    console.log(avatar);
-    // await axios
-    // .post(`${server}/api/user/info`, {
-    //   nickname: nickname,
-    //   avatar: avatar,
-    //   picture:picture,
-    //   email: email,
-    //   mark: mark,
-    //   facebook:facebook,
-    //   youtube:youtube,
-    //   skype:skype
-    // })
-    // .then(res => {
-    //   console.log(res)
-    // })
-  };
+  const userHandler = async () => {};
 
   return (
     <div className="account">
@@ -125,15 +109,6 @@ function Account() {
                 value={picture}
               />
             </div>
-
-            {/* <div className="img">
-              <p className="text-center">Profile image</p>
-              <img width={200} height={200} src={profile} alt="" />
-            </div>
-            <div className="img">
-              <p className="text-center">Background image</p>
-              <img width={200} height={200} src={background} alt="" />
-            </div> */}
           </div>
 
           <p className="pt-md-5">账户链接</p>
@@ -206,6 +181,7 @@ function Income() {
     </div>
   );
 }
+
 function Help() {
   const [isAgree, setIsAgree] = useState("false");
   return (
@@ -317,6 +293,7 @@ function Help() {
     </div>
   );
 }
+
 function Discount() {
   const [selectedFile, setSelectedFile] = useState();
   const [isFilePicked, setIsFilePicked] = useState(false);
@@ -329,7 +306,6 @@ function Discount() {
     setSelectedFile(event.target.files[0]);
     setIsFilePicked(true);
   };
-  // console.log(selectedFile.name);
   return (
     <div className="p-5">
       <h1>优惠设置</h1>
@@ -345,7 +321,6 @@ function Discount() {
         <p className="uploadname" onClick={() => onButtonClick()}>
           没有收藏品来管理优惠
         </p>
-        {/* <img src={URL.createObjectURL(selectedFile)} alt="dihan" /> */}
         <input
           type="file"
           name=""
@@ -359,6 +334,7 @@ function Discount() {
     </div>
   );
 }
+
 function Notice() {
   return (
     <div className="account">

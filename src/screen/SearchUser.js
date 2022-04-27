@@ -63,14 +63,7 @@ function SearchUser() {
       localStorage.getItem("defaultAddress")
     ) {
       getUser();
-      // window.clearTimeout(this.timer)
-      // this.getUser()
-      // this.get_nft_list()
-      // this.get_coins()
     } else {
-      //如果检测到没有注入tronWeb对象，则等待100ms后重新检测
-      //return
-      // this.timer = setTimeout(this.waitForGlobal, 100)
     }
   }, [detail]);
   return (
@@ -184,11 +177,6 @@ function SearchUser() {
                 <UnstyledSelectSimple />
               </Grid>
               <Grid className="p-2" item md={3} xs={6}>
-                {/* <input
-                  className="profileinput"
-                  type="text"
-                  placeholder="最近获得"
-                /> */}
                 <UnstyledSelectSimple />
               </Grid>
             </Grid>

@@ -90,14 +90,10 @@ function CreateBanner() {
 
             <Grid className="py-5" item md={12} lg={6} xs={12}>
               <div className="right getbetterRight">
-                {/* <p className="">名称</p> */}
                 <input type="text" placeholder="NFT 名称" />
                 <textarea type="text" placeholder="NFT 描述 (最多 300 个字)" />
                 <input type="text" placeholder="NFT 价格 -- BNB" />
-                {/* <p className="">联络方式</p>
-                <p className="">电子邮件</p> */}
                 <input type="text" placeholder="版权" />
-                {/* <p className="pb-10">NFT 项目描述（最多 300 个字)</p> */}
                 <div className="total mt-5 px-4 pt-2">
                   <span className="totaltitle">服务费</span>
                   <span className="totaltitle">5%</span>
@@ -151,9 +147,7 @@ function CreateBanner() {
                 <input type="text" placeholder="NFT 项目描述（最多 300 个字)" />
                 <input type="text" placeholder="总数量" />
                 <input type="text" placeholder="版权" />
-                {/* <p className="pb-10">合集描述 (最多 300 个字)</p>
-                <p>总数量</p>
-                <p>版权</p> */}
+
               </div>
             </Grid>
             <Grid className="p-4" item md={6} xs={12}>
@@ -168,9 +162,6 @@ function CreateBanner() {
                   className="form-check my-2 d-flex justify-content-between "
                 >
                   <span className="totaltitle">立即铸造</span>
-                  {/* <label className="form-check-label" for="flexRadioDefault1">
-                    立即铸造
-                  </label> */}
                   <div className="img">
                     <img
                       src={radiobutton === "立即铸造" ? tickActive : tick}
@@ -205,25 +196,6 @@ function CreateBanner() {
                   </div>
                 </div>
                 {/* radio buttons  */}
-
-                {/* <div className="total mt-5  pt-2">
-                  <span className="totaltitle">立即列印</span>
-                  <div className="img">
-                    <img src={tick} alt="" />
-                  </div>
-                </div>
-                <div className="total mt-4">
-                  <span className="totaltitle">买方列印</span>
-                  <div className="img">
-                    <img src={tick} alt="" />
-                  </div>
-                </div>
-                <div className="total mt-4">
-                  <span className="totaltitle">隐藏直到列印</span>
-                  <div className="img">
-                    <img src={tick} alt="" />
-                  </div>
-                </div> */}
               </div>
             </Grid>
           </Grid>
@@ -290,7 +262,6 @@ function CreateBanner() {
               的链接，以便用户可以单击以了解更多信息
               欢迎链接到您自己的网页以了解更多详情
             </p>
-            {/* <p className="mt-5 px-3">https://yoursiteio/item/123</p> */}
             <input type="text" placeholder="https://yoursiteio/item/123" />
 
             {/* second */}
@@ -330,13 +301,11 @@ function CreateBanner() {
 
             {/* five */}
             <h1 className="mt-5 pt-5">供应</h1>
-
             <p className="mt-5 px-3">Binance Smart Chain</p>
 
             {/* six */}
             <div className="d-flex ">
               <h1 className="mt-5 pt-5">冻结元数据</h1>
-              {/* <p className="mt-5 pt-5">"O"</p> */}
             </div>
             <p style={{ background: "transparent" }} className="my-4">
               允许您永久锁定并存储此项目的所有内容，并将其存储在分散的文件存储中

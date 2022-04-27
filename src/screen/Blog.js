@@ -1,7 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SingleBlog from "../components/SingleBlog";
-import SingleProduct from "../components/SingleProduct";
 
 import { server } from "../config/index";
 import axios from "axios";
@@ -20,8 +19,6 @@ function Blog() {
     });
   };
 
-  console.log(blogs);
-
   const loadmorehandler = () => {
     setLoaderSpin(true);
     setTimeout(() => {
@@ -31,18 +28,13 @@ function Blog() {
   };
 
   useEffect(() => {
-    // window.clearTimeout(this.timer)
     if (
       localStorage.getItem("Token") &&
       localStorage.getItem("defaultAddress")
     ) {
-      // window.clearTimeout(this.timer)
       blogHandler();
     } else {
       console.log("please Wait");
-      //如果检测到没有注入tronWeb对象，则等待100ms后重新检测
-      //return
-      // this.timer = setTimeout(this.waitForGlobal, 100)
     }
   }, []);
   return (

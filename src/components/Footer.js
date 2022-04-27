@@ -12,7 +12,6 @@ import { Grid } from "@mui/material";
 
 function Footer() {
   return (
-    // <div className="navbar">
     <>
       <div className="wrapper upperfooter py-115">
         <Grid container>
